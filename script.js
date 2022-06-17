@@ -1,8 +1,12 @@
+//This function takes two choices and based on these choices, returns a winner.
 function playRound(playerSelection, computerSelection) {
 
+    //Transform the choices into lower case for ease of use in the code.
     let playerChoice = playerSelection.toLowerCase();
     let computerChoice = computerSelection.toLowerCase();
 
+    //This part of the code resolves who is the winner and grants the winner a point,
+    //while also returning a message.
     if (playerChoice == computerChoice) {
         computerPoints++;
         playerPoints++;
@@ -34,6 +38,8 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+//This function generates a random number between 1-3 and turns that number into a string
+//containing the computer's choice.
 function computerPlay() {
 
     let computerChoice = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
@@ -57,7 +63,8 @@ let computerSelection = computerPlay();
 let playerPoints = 0;
 let computerPoints = 0;
 
-
+//This is the main function of the game. It plays out a 5-round game,
+//and at the end decides who's the winner based on the amounts of points they have.
 function game() {
     for (let i = 0; i < 5; i++) {
         playerSelection = prompt("What's your choice?");
