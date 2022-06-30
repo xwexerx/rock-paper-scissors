@@ -130,7 +130,3 @@ document.body.appendChild(resultsElement);
 const replayElement = document.createElement("p");
 replayElement.innerText = "";
 document.body.appendChild(replayElement);
-
-
-
-
