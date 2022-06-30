@@ -80,7 +80,7 @@ let computerSelection = computerPlay();
 let playerPoints = 0;
 let computerPoints = 0;
 
-
+// This function updates the score in the text element on the page
 function updateScore() {
     resultsElement.innerText = `${playerPoints} - ${computerPoints}`;
 }
@@ -99,27 +99,6 @@ function checkForWinner() {
         replayElement.innerText = "Reload the page to play again.";
     }
 }
-
-//This is the main function of the game. It plays out a 5-round game,
-//and at the end decides who's the winner based on the amounts of points they have.
-/*function game() {
-    for (let i = 0; i < 5; i++) {
-        playerSelection = prompt("What's your choice?");
-        computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
-    }
-    console.log(`Your score = ${playerPoints}
-The Computer's score = ${computerPoints}`)
-    if (playerPoints > computerPoints) {
-        return "You have won the 5 round game!"
-    }
-    else if (playerPoints < computerPoints){
-        return "You have lost the 5 round game!"
-    }
-    else {
-        return "It's a draw!"
-    }
-}*/
 
 // Add three buttons to the HTMl
 const rockElement = document.createElement("button");
