@@ -15,4 +15,4 @@ Project was created with:
 * JavaScript
 	
 ## Live Preview
-You can preview the website [Here](https://xwexerx.github.io/TheOdinProject-Landing-Page/)
+You can preview the website [Here](https://xwexerx.github.io/rock-paper-scissors/)
