@@ -1,7 +1,8 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     choice = Math.floor(Math.random() * (3 - 1 + 1) + 1);
-
-    console.log(choice);
 
     switch(choice) {
         case 1:
@@ -16,5 +17,42 @@ function getComputerChoice() {
     }
 }
 
+function getHumanChoice() {
+    return prompt("What's your choice?").toLowerCase();
+    
+}
 
-console.log(getComputerChoice());
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice == computerChoice) {
+        console.log("Draw!")
+    } else if (humanChoice == "rock") {
+        if (computerChoice == "paper") {
+            console.log("You lose! Paper beats Rock.")
+            computerScore++;
+        } else {
+            console.log("You win! Rock beats Scissors.")
+            humanScore++;
+        }
+    } else if (humanChoice == "paper") {
+        if (computerChoice == "scissors") {
+            console.log("You lose! Scissors beats Paper.")
+            computerScore++;
+        } else {
+            console.log("You win! Paper beats Rock.")
+            humanScore++;
+        }
+    } else if (humanChoice == "scissors") {
+        if (computerChoice == "rock") {
+            console.log("You lose! Rock beats Scissors.")
+            computerScore++;
+        } else {
+            console.log("You win! Scissors beats Paper.")
+            humanScore++;
+        }
+    }
+}
+  
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+  
+playRound(humanSelection, computerSelection);
