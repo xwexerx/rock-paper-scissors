@@ -1,14 +1,18 @@
 function getComputerChoice() {
-    choice = Math.ceil((Math.random()*100));
+    choice = Math.floor(Math.random() * (3 - 1 + 1) + 1);
 
     console.log(choice);
 
-    if (choice <= 33) {
-        return "rock"
-    } else if (choice <= 66 && choice > 33) {
-        return "paper"
-    } else {
-        return "scissors"
+    switch(choice) {
+        case 1:
+            return "rock";
+            break;
+        case 2:
+            return "paper";
+            break;
+        case 3:
+            return "scissors";
+            break;
     }
 }
 
